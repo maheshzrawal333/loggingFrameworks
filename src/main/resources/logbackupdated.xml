@@ -1,0 +1,34 @@
+<configuration>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss} [%thread] %-5level %logger{20} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- ========================================== -->
+    <!-- PACKAGE FILTERS (The Mini-Switches)        -->
+    <!-- ========================================== -->
+
+    <!-- 1. Silence the noisy database. Only tell me if it crashes! -->
+    <logger name="org.hibernate" level="ERROR" />
+
+    <!-- 2. Silence the web server. Only tell me warnings or errors. -->
+    <logger name="org.springframework" level="WARN" />
+
+    <!-- 3. TURN UP THE VOLUME ON MY CODE!
+         For any class inside the "maheshz" folder, print EVERYTHING (DEBUG, INFO, WARN, ERROR) -->
+    <logger name="maheshz" level="DEBUG" />
+
+    <!-- ========================================== -->
+    <!-- THE MASTER SWITCH (The Default)            -->
+    <!-- ========================================== -->
+
+    <!-- If a package is NOT listed above, it falls back to this default. -->
+    <root level="WARN">
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+</configuration>
+
+

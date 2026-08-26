@@ -1,0 +1,24 @@
+<!-- 1. Your normal, slow File Appender -->
+<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <file>logs/app.log</file>
+    <!-- ... rolling policy and encoder ... -->
+</appender>
+
+        <!-- 2. The Async Wrapper (The Queue) -->
+<appender name="ASYNC_FILE" class="ch.qos.logback.classic.AsyncAppender">
+<!-- How many messages can wait in the queue? -->
+<queueSize>512</queueSize>
+<!-- If the queue gets 80% full, it automatically throws away TRACE, DEBUG, and INFO
+     logs to make room for WARN and ERROR! -->
+<discardingThreshold>20</discardingThreshold>
+
+<!-- Plug the slow File appender into the fast Async queue -->
+<appender-ref ref="FILE" />
+</appender>
+
+        <!-- 3. Plug the ASYNC appender into the Master Switch -->
+<root level="INFO">
+
+<appender-ref ref="ASYNC_FILE" />
+</root>
+

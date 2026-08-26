@@ -1,0 +1,30 @@
+    <configuration>
+
+        <!-- 1. CONSOLE TOOL: Defines how it looks on your screen -->
+        <!-- THE APPENDER: Where does it go? -->
+        <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>%d{HH:mm:ss} [%thread] %-5level %logger{20} - %msg%n</pattern>
+            </encoder>
+        </appender>
+
+        <!-- 2. FILE TOOL: Saves a permanent history to your hard drive -->
+        <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>logs/bank-app.log</file>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>logs/bank-app-%d{yyyy-MM-dd}.log</fileNamePattern>
+                <maxHistory>30</maxHistory>
+            </rollingPolicy>
+            <encoder>
+                <!-- THE LAYOUT (Encoder): What does it look like? -->
+                <pattern>%d{HH:mm:ss} [%thread] [%X{transactionId}] %-5level %logger{20} - %msg%n</pattern>
+            </encoder>
+        </appender>
+
+        <!-- 3. THE MASTER SWITCH -->
+        <root level="WARN">
+            <appender-ref ref="CONSOLE" />
+            <appender-ref ref="FILE" />
+        </root>
+
+    </configuration>

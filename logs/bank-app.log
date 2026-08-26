@@ -1,0 +1,22 @@
+2026-08-26 14:43:32 [pool-1-thread-3] INFO  maheshz.BankService - Initializing transfer of $100.0 for user: Charlie
+2026-08-26 14:43:32 [pool-1-thread-1] INFO  maheshz.BankService - Initializing transfer of $500.0 for user: Alice
+2026-08-26 14:43:32 [pool-1-thread-2] INFO  maheshz.BankService - Initializing transfer of $15000.0 for user: Bob
+2026-08-26 14:43:32 [pool-1-thread-2] WARN  maheshz.BankService - Security Alert: Unusually large transaction for user Bob
+2026-08-26 14:43:33 [pool-1-thread-1] INFO  maheshz.BankService - Transfer completed successfully for user Alice.
+2026-08-26 14:43:33 [pool-1-thread-3] INFO  maheshz.BankService - Transfer completed successfully for user Charlie.
+2026-08-26 14:43:33 [pool-1-thread-2] INFO  maheshz.BankService - Transfer completed successfully for user Bob.
+15:25:36 [pool-1-thread-1] [TXN-991] INFO  maheshz.BankService - Initializing transfer of $500.0 for user: Alice
+15:25:36 [pool-1-thread-3] [TXN-993] INFO  maheshz.BankService - Initializing transfer of $100.0 for user: Charlie
+15:25:36 [pool-1-thread-2] [TXN-992] INFO  maheshz.BankService - Initializing transfer of $15000.0 for user: Bob
+15:25:36 [pool-1-thread-2] [TXN-992] WARN  maheshz.BankService - Security Alert: Unusually large transaction for user Bob
+15:25:37 [pool-1-thread-3] [TXN-993] INFO  maheshz.BankService - Transfer completed successfully for user Charlie.
+15:25:37 [pool-1-thread-1] [TXN-991] INFO  maheshz.BankService - Transfer completed successfully for user Alice.
+15:25:37 [pool-1-thread-2] [TXN-992] INFO  maheshz.BankService - Transfer completed successfully for user Bob.
+16:03:06 [pool-1-thread-2] [TXN-992] INFO  maheshz.BankService - Initializing transfer of $15000.0 for user: Bob
+16:03:06 [pool-1-thread-1] [TXN-991] INFO  maheshz.BankService - Initializing transfer of $500.0 for user: Alice
+16:03:06 [pool-1-thread-3] [TXN-993] INFO  maheshz.BankService - Initializing transfer of $100.0 for user: Charlie
+16:03:06 [pool-1-thread-2] [TXN-992] WARN  maheshz.BankService - Security Alert: Unusually large transaction for user Bob
+16:03:06 [pool-1-thread-2] [TXN-992] INFO  maheshz.BankService - Transfer completed successfully for user Bob.
+16:03:06 [pool-1-thread-3] [TXN-993] INFO  maheshz.BankService - Transfer completed successfully for user Charlie.
+16:03:06 [pool-1-thread-1] [TXN-991] INFO  maheshz.BankService - Transfer completed successfully for user Alice.
+16:03:38 [pool-1-thread-2] [TXN-992] WARN  maheshz.BankService - Security Alert: Unusually large transaction for user Bob
